@@ -1,0 +1,291 @@
+E:\ljx\medcn-s2s\venv\Scripts\python.exe E:/ljx/medcn-s2s/seq2seq-origin.py
+E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\modules\rnn.py:61: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+0it [00:00, ?it/s]E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\functional.py:1628: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+1it [00:01,  1.36s/it]train loss:9.966882
+51it [00:14,  3.61it/s]train loss:9.442547
+101it [00:28,  3.24it/s]train loss:7.126489
+151it [00:41,  3.70it/s]train loss:6.440078
+201it [00:55,  2.98it/s]train loss:6.514191
+251it [01:09,  3.67it/s]train loss:6.617345
+301it [01:23,  4.37it/s]train loss:6.247344
+351it [01:36,  5.16it/s]train loss:6.258142
+401it [01:49,  3.83it/s]train loss:6.549511
+404it [01:50,  3.66it/s]
+['', '', '', '', '']
+BLEU:0.000000
+0it [00:00, ?it/s]0
+1it [00:00,  4.80it/s]train loss:6.565665
+51it [00:14,  3.08it/s]train loss:6.301140
+101it [00:28,  3.27it/s]train loss:6.403312
+151it [00:41,  3.28it/s]train loss:6.294415
+201it [00:55,  3.30it/s]train loss:6.423722
+251it [01:08,  3.14it/s]train loss:6.472856
+301it [01:21,  3.54it/s]train loss:6.156013
+351it [01:36,  3.44it/s]train loss:6.160948
+401it [01:50,  3.41it/s]train loss:6.510040
+404it [01:51,  3.63it/s]
+0it [00:00, ?it/s]['', '', '', '', '']
+BLEU:0.000000
+0
+1it [00:00,  5.01it/s]train loss:6.499174
+51it [00:14,  3.24it/s]train loss:6.176279
+101it [00:28,  3.45it/s]train loss:6.310466
+151it [00:42,  4.76it/s]train loss:6.249678
+201it [00:55,  3.63it/s]train loss:6.314386
+251it [01:08,  3.27it/s]train loss:6.240410
+301it [01:21,  4.29it/s]train loss:6.078355
+351it [01:35,  4.38it/s]train loss:6.112572
+401it [01:49,  3.43it/s]train loss:6.336495
+404it [01:50,  3.66it/s]
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+['结要的,,,,,,,,,,,,,,,,,,,,,,,', '结要】,,的,,的,,,的,', '', '结要】,,,的,,,,,,,,,,,,,,,,,,,', '结要的,,,,,,,,,,,,,,,,,,,,,,,']
+BLEU:0.000000
+2
+1it [00:00,  2.79it/s]train loss:6.311357
+51it [00:14,  3.46it/s]train loss:6.173700
+101it [00:29,  3.46it/s]train loss:6.407886
+151it [00:42,  3.21it/s]train loss:6.043925
+201it [00:56,  3.75it/s]train loss:6.355601
+251it [01:08,  4.31it/s]train loss:6.280373
+301it [01:22,  3.45it/s]train loss:5.765399
+351it [01:35,  3.76it/s]train loss:5.863701
+401it [01:48,  3.67it/s]train loss:6.195814
+404it [01:49,  3.70it/s]
+['结果,,的,,,,,,,,,,,,,,,的,,的,,', '结要】：的的,,的的,', '', '结要】：的的,,,,,,,,,,,,的,,的,,的,', '结果,的的,,,,,,,,,的,,,的,,的,,']
+BLEU:0.000152
+0it [00:00, ?it/s]3
+train loss:6.401634
+51it [00:13,  3.17it/s]train loss:5.780118
+101it [00:26,  4.37it/s]train loss:6.302163
+151it [00:40,  3.86it/s]train loss:5.879447
+201it [00:53,  3.16it/s]train loss:6.025052
+251it [01:06,  3.17it/s]train loss:5.726714
+301it [01:20,  4.22it/s]train loss:5.948026
+351it [01:33,  4.30it/s]train loss:6.086029
+401it [01:47,  3.26it/s]train loss:6.061772
+404it [01:48,  3.72it/s]
+['结果:,,,的的的,,,,,,,,,,,,,,,,的的', '结果:治疗效,,,,的的', '', '结论:::治疗效的,,,,,,,,,,,,,,,,的的', '结果,,的的的,,,,,,,,,,,,,,,的的的']
+BLEU:0.000437
+0it [00:00, ?it/s]4
+1it [00:00,  2.78it/s]train loss:5.976503
+51it [00:14,  3.02it/s]train loss:5.613281
+101it [00:28,  3.04it/s]train loss:5.829114
+151it [00:42,  3.62it/s]train loss:5.708806
+201it [00:56,  3.80it/s]train loss:5.861713
+251it [01:09,  3.88it/s]train loss:6.114510
+301it [01:23,  3.65it/s]train loss:5.934729
+351it [01:36,  3.92it/s]train loss:6.076451
+401it [01:50,  3.48it/s]train loss:5.929617
+404it [01:51,  3.63it/s]
+0it [00:00, ?it/s]['结果::,,的的的,,,,,,,,,,,,,,,的的的', '结果:治疗效,,,的的的', '', '结论::::,,的的的的,,,,,,,,,,的的的', '结果:,,的的的的,,,,,,,,,,的的的的的']
+BLEU:0.000035
+4
+1it [00:00,  2.80it/s]train loss:5.802569
+51it [00:14,  3.70it/s]train loss:6.046663
+101it [00:27,  4.09it/s]train loss:6.269153
+151it [00:42,  4.56it/s]train loss:6.152119
+201it [00:56,  3.21it/s]train loss:5.713347
+251it [01:11,  3.40it/s]train loss:6.082570
+301it [01:25,  3.09it/s]train loss:5.262482
+351it [01:37,  3.39it/s]train loss:5.384513
+401it [01:51,  3.93it/s]train loss:6.387743
+404it [01:52,  3.59it/s]
+0it [00:00, ?it/s]['结果::,,的病的的的的的的的的的的的,,,,,,,的的的的', '结果:治疗效,,,的的的的', '', '结论::::的病的的的的的的的的的的的的的的的的的的的的', '结果::的病的的的的的的的的的的的的的的的的的的的的的的的']
+BLEU:0.000098
+4
+train loss:5.656117
+51it [00:14,  3.21it/s]train loss:5.320245
+101it [00:28,  3.25it/s]train loss:6.362895
+151it [00:42,  4.37it/s]train loss:6.141838
+201it [00:56,  3.15it/s]train loss:5.580602
+251it [01:10,  3.45it/s]train loss:5.181201
+301it [01:23,  3.32it/s]train loss:5.142702
+351it [01:36,  3.51it/s]train loss:5.248318
+401it [01:50,  4.13it/s]train loss:6.382748
+404it [01:51,  3.63it/s]
+['结果::,的病,,,,,,,,,,,,,,,,,,,,,,的的的', '结果:治疗,,,,,的的', '', '结论::::的病的的的的的的的的的的的的的的的的的的的', '结果::的病的的的的的的的的的的的的的的的的的的的的的的的的']
+BLEU:0.001071
+7
+1it [00:00,  4.94it/s]train loss:6.364633
+51it [00:13,  3.00it/s]train loss:5.206288
+101it [00:27,  2.99it/s]train loss:5.401225
+151it [00:42,  4.70it/s]train loss:6.153149
+201it [00:57,  4.10it/s]train loss:6.274541
+251it [01:10,  4.69it/s]train loss:6.040246
+301it [01:23,  3.64it/s]train loss:5.893589
+351it [01:38,  3.55it/s]train loss:6.076006
+401it [01:51,  4.13it/s]train loss:6.357201
+404it [01:52,  3.60it/s]
+['结果::治疗的病,,,,,,,,,,,,,,,,,,,,,,', '结果:治疗,,,,,,', '', '【摘要】：正的病的病的的的的的的的的的的的的的的', '我们的是一种治疗的的的的的的的的的的的的的的的的的的的的']
+BLEU:0.004627
+0it [00:00, ?it/s]8
+train loss:5.422618
+51it [00:14,  3.65it/s]train loss:5.091387
+101it [00:27,  3.52it/s]train loss:5.291935
+151it [00:41,  3.79it/s]train loss:5.195878
+201it [00:55,  3.53it/s]train loss:5.384987
+251it [01:09,  3.99it/s]train loss:4.957853
+301it [01:22,  3.91it/s]train loss:5.894607
+351it [01:36,  3.39it/s]train loss:6.046115
+401it [01:49,  4.30it/s]train loss:6.349624
+404it [01:50,  3.66it/s]
+['方法:::治疗的治疗的治疗,,,,,,,,,,,,,,,,', '结果:治疗,,,,,', '', '【摘要】：正的病的病的的的的的的的的的的的的的的的的', '我们的:年来,,,的的的的的的的的的的的的的的的的的的的的的']
+BLEU:0.005398
+9
+1it [00:00,  4.58it/s]train loss:6.352089
+51it [00:14,  3.76it/s]train loss:4.986540
+101it [00:28,  3.58it/s]train loss:5.198628
+151it [00:42,  3.17it/s]train loss:5.094291
+201it [00:56,  4.52it/s]train loss:6.254862
+251it [01:10,  3.36it/s]train loss:5.984430
+301it [01:24,  3.50it/s]train loss:4.901185
+351it [01:38,  3.85it/s]train loss:4.979797
+401it [01:52,  3.69it/s]train loss:5.469397
+404it [01:53,  3.57it/s]
+['方法::治疗的治疗的治疗,,,,,,,,,,,,,', '结果:治疗,,,,', '', '【摘要】：正的病的病的病的的的的的的的的的的的的的', '我们的年来,对于治疗的病的的的的的的的的的的的的的的的的的的的']
+BLEU:0.005463
+10
+1it [00:00,  5.01it/s]train loss:6.337595
+51it [00:14,  2.88it/s]train loss:4.896243
+101it [00:28,  3.52it/s]train loss:5.117322
+151it [00:42,  3.84it/s]train loss:5.005082
+201it [00:56,  3.67it/s]train loss:6.276526
+251it [01:10,  3.27it/s]train loss:4.789897
+301it [01:23,  2.94it/s]train loss:4.830275
+351it [01:37,  4.50it/s]train loss:6.033714
+401it [01:50,  3.14it/s]train loss:5.404302
+404it [01:51,  3.62it/s]
+['方法::治疗的治疗的的的的的的的的的的的的的的的的的的的', '结果:治疗,,,,,,', '', '【摘要】：正的病的病的病的的的的的的的的的的的的的的', '我们的年来,对于治疗的的的的的的,,,,,,,,,,,,,']
+BLEU:0.005737
+0it [00:00, ?it/s]11
+1it [00:00,  2.78it/s]train loss:5.161740
+51it [00:14,  4.14it/s]train loss:5.958911
+101it [00:28,  3.90it/s]train loss:6.215099
+151it [00:41,  3.78it/s]train loss:4.935646
+201it [00:54,  3.43it/s]train loss:5.182606
+251it [01:08,  3.14it/s]train loss:4.716600
+301it [01:23,  3.51it/s]train loss:4.772234
+351it [01:35,  4.09it/s]train loss:6.020749
+401it [01:49,  4.32it/s]train loss:6.309931
+404it [01:50,  3.66it/s]
+['方法:治疗的治疗的治疗的治疗,,的的的的,,,,,,,,', '结果:治疗,,,,,,,', '', '【摘要】：正的病病的病的病的的的的的的的的的的的的的', '我们的年来,,,,,,,,,,,,,,,,,,,,,,,,']
+BLEU:0.005875
+12
+1it [00:00,  2.81it/s]train loss:5.094445
+51it [00:15,  2.93it/s]train loss:4.752528
+101it [00:28,  4.23it/s]train loss:6.185162
+151it [00:41,  3.32it/s]train loss:4.877110
+201it [00:55,  3.87it/s]train loss:6.188155
+251it [01:07,  4.62it/s]train loss:5.864654
+301it [01:22,  3.73it/s]train loss:5.911905
+351it [01:35,  4.58it/s]train loss:5.989243
+401it [01:49,  4.48it/s]train loss:6.301674
+404it [01:49,  3.67it/s]
+['方法:治疗治疗的治疗的治疗,,的治疗,,,,,,,,,,,', '结果:治疗,,,,,,,', '', '【摘要】：正常见的病的病病的的的的的的的的的的的的', '我们对于治疗的治疗的的的,,,,,,,,,,,,,,,,,']
+BLEU:0.006312
+13
+1it [00:00,  2.76it/s]train loss:5.038112
+51it [00:13,  3.57it/s]train loss:4.703093
+101it [00:27,  3.87it/s]train loss:6.169949
+151it [00:41,  3.39it/s]train loss:4.831150
+201it [00:54,  4.58it/s]train loss:6.175887
+251it [01:09,  3.93it/s]train loss:5.849397
+301it [01:23,  3.36it/s]train loss:4.697782
+351it [01:37,  3.64it/s]train loss:5.996259
+401it [01:50,  4.16it/s]train loss:6.300020
+404it [01:51,  3.64it/s]
+0it [00:00, ?it/s]['方法:治疗治疗的治疗,的治疗,的治疗,,的治疗,,,,,,,,', '结果:治疗,,,,,,,', '', '【摘要】：正常见的病病的病病的病的的的的的的的的的', '我们的年来,年来,,,,,,,,,,,,,,,,,,,']
+BLEU:0.006176
+13
+1it [00:00,  5.17it/s]train loss:6.267580
+51it [00:14,  3.03it/s]train loss:4.656402
+101it [00:28,  4.68it/s]train loss:6.163396
+151it [00:41,  3.76it/s]train loss:6.030732
+201it [00:55,  3.46it/s]train loss:5.068739
+251it [01:09,  2.88it/s]train loss:4.567057
+301it [01:23,  3.01it/s]train loss:4.666372
+351it [01:37,  3.73it/s]train loss:6.026077
+401it [01:51,  4.03it/s]train loss:6.300947
+404it [01:52,  3.60it/s]
+['方法:治疗治疗的治疗,的治疗,治疗,治疗,治疗,治疗,治疗,治疗,治疗效果,', '结果:治疗,,,,,,,', '', '【摘要】：正常见的病病的病病的病的的的的的的的的的', '我们的年来,年来,,,,,,,,,,,,,,,,,,,,']
+BLEU:0.006430
+0it [00:00, ?it/s]15
+1it [00:00,  2.75it/s]train loss:4.938499
+51it [00:14,  3.32it/s]train loss:4.620500
+101it [00:28,  2.99it/s]train loss:4.917549
+151it [00:42,  2.98it/s]train loss:4.765059
+201it [00:57,  3.19it/s]train loss:5.038628
+251it [01:11,  3.48it/s]train loss:4.523510
+301it [01:25,  3.74it/s]train loss:5.919167
+351it [01:40,  3.60it/s]train loss:6.011264
+401it [01:54,  3.72it/s]train loss:5.220894
+404it [01:55,  3.51it/s]
+['方法:治疗治疗的治疗,的治疗,治疗,治疗,治疗,治疗,治疗,治疗,治疗效果,', '结果:治疗,,,,,,,,', '', '【摘要】：正常见的病病的病病的病的病的的的的的的的的', '我们的年来,年来,年来,,,,,,,,,,,,,,,,,,']
+BLEU:0.006618
+0it [00:00, ?it/s]16
+1it [00:00,  2.79it/s]train loss:4.893032
+51it [00:14,  3.99it/s]train loss:5.899057
+101it [00:28,  4.02it/s]train loss:6.156878
+151it [00:41,  3.89it/s]train loss:6.021411
+201it [00:55,  4.54it/s]train loss:6.158364
+251it [01:08,  3.70it/s]train loss:4.489515
+301it [01:22,  3.45it/s]train loss:4.627513
+351it [01:35,  4.01it/s]train loss:5.995510
+401it [01:49,  3.10it/s]train loss:5.210201
+404it [01:50,  3.66it/s]
+0it [00:00, ?it/s]['方法:治疗治疗治疗的治疗治疗,治疗治疗,治疗治疗,治疗,治疗,治疗效果,,,,,', '结果:治疗,,,,,,,', '', '【摘要】：正常见的病病的病病的病的的的的的的的的的的', '这些研究中医治疗的治疗,,,,,,,,,,,,,,,,,,,']
+BLEU:0.006468
+16
+1it [00:00,  4.82it/s]train loss:6.198301
+51it [00:14,  3.67it/s]train loss:4.579016
+101it [00:27,  4.29it/s]train loss:6.158720
+151it [00:41,  3.80it/s]train loss:4.736340
+201it [00:55,  4.43it/s]train loss:6.165252
+251it [01:10,  3.12it/s]train loss:4.466710
+301it [01:24,  3.11it/s]train loss:4.612678
+351it [01:38,  3.67it/s]train loss:6.017674
+401it [01:52,  3.77it/s]train loss:5.208392
+404it [01:52,  3.58it/s]
+['方法:治疗治疗治疗的治疗治疗的治疗治疗治疗,治疗治疗治疗,治疗效果,治疗效果,', '结果:治疗,,,,,,,', '', '【摘要】：正的病病的病病的病病的病的的的的的的的的的', '这些研究中医治疗的治疗的治疗的治疗,,,,,,,,,,,,,,,']
+BLEU:0.006923
+18
+1it [00:00,  5.09it/s]train loss:6.129943
+51it [00:13,  3.95it/s]train loss:5.906831
+101it [00:26,  3.14it/s]train loss:4.877440
+151it [00:41,  2.90it/s]train loss:4.732006
+201it [00:55,  3.29it/s]train loss:5.020160
+251it [01:09,  3.42it/s]train loss:4.449596
+301it [01:23,  3.11it/s]train loss:4.604023
+351it [01:37,  3.61it/s]train loss:4.696946
+401it [01:52,  3.12it/s]train loss:5.217750
+404it [01:52,  3.58it/s]
+['方法:治疗治疗的治疗的治疗的治疗的治疗的治疗治疗,疗效,治疗效果,治疗效果,', '结果:治疗组织,,,,', '', '【摘要】：正的病病的病病的病病的的的的的的的的的的的', '这些研究中医学的治疗的的的的的的的的的的的的的的的的的的的的的']
+BLEU:0.007077
+19
+Train finished
+Best Val BLEU:0.007077
+Test BLEU:0.008897
+finish
+
+Process finished with exit code 0

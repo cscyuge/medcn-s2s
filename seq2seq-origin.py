@@ -10,6 +10,7 @@ from tqdm import tqdm
 import copy
 from bleu_eval import count_score
 import os
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from dataset import build_dataset, build_iterator
 
@@ -43,9 +44,10 @@ class Attention(nn.Module):
          >>> output = Variable(torch.randn(5, 5, 256))
          >>> output, attn = attention(output, context)
     """
+
     def __init__(self, dim):
         super(Attention, self).__init__()
-        self.linear_out = nn.Linear(dim*2, dim)
+        self.linear_out = nn.Linear(dim * 2, dim)
         self.mask = None
 
     def set_mask(self, mask):
@@ -155,7 +157,7 @@ class EncoderRNN(BaseRNN):
                  n_layers=1, bidirectional=False, rnn_cell='gru', variable_lengths=False,
                  embedding=None, update_embedding=True):
         super(EncoderRNN, self).__init__(vocab_size, max_len, hidden_size,
-                input_dropout_p, dropout_p, n_layers, rnn_cell)
+                                         input_dropout_p, dropout_p, n_layers, rnn_cell)
 
         self.variable_lengths = variable_lengths
         self.embedding = nn.Embedding(vocab_size, hidden_size)
@@ -184,6 +186,7 @@ class EncoderRNN(BaseRNN):
         if self.variable_lengths:
             output, _ = nn.utils.rnn.pad_packed_sequence(output, batch_first=True)
         return output, hidden
+
 
 class DecoderRNN(BaseRNN):
     r"""
@@ -235,12 +238,12 @@ class DecoderRNN(BaseRNN):
     KEY_SEQUENCE = 'sequence'
 
     def __init__(self, vocab_size, max_len, hidden_size,
-            sos_id, eos_id,
-            n_layers=1, rnn_cell='gru', bidirectional=False,
-            input_dropout_p=0, dropout_p=0, use_attention=False):
+                 sos_id, eos_id,
+                 n_layers=1, rnn_cell='gru', bidirectional=False,
+                 input_dropout_p=0, dropout_p=0, use_attention=False):
         super(DecoderRNN, self).__init__(vocab_size, max_len, hidden_size,
-                input_dropout_p, dropout_p,
-                n_layers, rnn_cell)
+                                         input_dropout_p, dropout_p,
+                                         n_layers, rnn_cell)
 
         self.bidirectional_encoder = bidirectional
         self.rnn = self.rnn_cell(hidden_size, hidden_size, n_layers, batch_first=True, dropout=dropout_p)
@@ -258,7 +261,7 @@ class DecoderRNN(BaseRNN):
             self.attention = Attention(self.hidden_size)
 
         self.out = nn.Linear(self.hidden_size, self.output_size)
-        self.hidden_change = nn.Linear(self.hidden_size//2, self.hidden_size//2)
+        self.hidden_change = nn.Linear(self.hidden_size // 2, self.hidden_size // 2)
 
     def forward_step(self, input_var, hidden, encoder_outputs, function):
         batch_size = input_var.size(0)
@@ -272,11 +275,13 @@ class DecoderRNN(BaseRNN):
         if self.use_attention:
             output, attn = self.attention(output, encoder_outputs)
 
-        predicted_softmax = function(self.out(output.contiguous().view(-1, self.hidden_size)), dim=1).view(batch_size, output_size, -1)
+        predicted_softmax = function(self.out(output.contiguous().view(-1, self.hidden_size)), dim=1).view(batch_size,
+                                                                                                           output_size,
+                                                                                                           -1)
         return predicted_softmax, hidden, attn
 
     def forward(self, inputs=None, encoder_hidden=None, encoder_outputs=None,
-                    function=F.log_softmax, teacher_forcing_ratio=0):
+                function=F.log_softmax, teacher_forcing_ratio=0):
         ret_dict = dict()
         if self.use_attention:
             ret_dict[DecoderRNN.KEY_ATTN_SCORE] = list()
@@ -322,8 +327,9 @@ class DecoderRNN(BaseRNN):
         else:
             decoder_input = inputs[:, 0].unsqueeze(1)
             for di in range(max_length):
-                decoder_output, decoder_hidden, step_attn = self.forward_step(decoder_input, decoder_hidden, encoder_outputs,
-                                                                          function=function)
+                decoder_output, decoder_hidden, step_attn = self.forward_step(decoder_input, decoder_hidden,
+                                                                              encoder_outputs,
+                                                                              function=function)
                 step_output = decoder_output.squeeze(1)
                 symbols = decode(di, step_output, step_attn)
                 decoder_input = symbols
@@ -378,10 +384,9 @@ class DecoderRNN(BaseRNN):
                 inputs = inputs.cuda()
             max_length = self.max_length
         else:
-            max_length = inputs.size(1) - 1 # minus the start of sequence symbol
+            max_length = inputs.size(1) - 1  # minus the start of sequence symbol
 
         return inputs, batch_size, max_length
-
 
 
 class Seq2seq(nn.Module):
@@ -434,16 +439,15 @@ class Seq2seq(nn.Module):
         return result
 
 
-
 def build(hidden_size, batch_size, cuda, bidirectional):
-
     x = import_module('bert')
     bert_model = 'hfl/chinese-bert-wwm-ext'
     config = x.Config(batch_size, bert_model)
-    dataset = build_dataset(config, './data/src_ids.pkl', './data/src_masks.pkl', './data/tar_ids.pkl', './data/tar_masks.pkl', './data/tar_txts.pkl')
-    train_data = dataset[:len(dataset)//10*8]
-    val_data = dataset[len(dataset)//10*8:len(dataset)//10*9]
-    test_data = dataset[len(dataset)//10*9:]
+    dataset = build_dataset(config, './data/src_ids.pkl', './data/src_masks.pkl', './data/tar_ids.pkl',
+                            './data/tar_masks.pkl', './data/tar_txts.pkl')
+    train_data = dataset[:len(dataset) // 10 * 8]
+    val_data = dataset[len(dataset) // 10 * 8:len(dataset) // 10 * 9]
+    test_data = dataset[len(dataset) // 10 * 9:]
     # train_data = dataset[:len(dataset) // 30 * 1]
     # val_data = dataset[len(dataset) // 30 * 1:len(dataset) // 30 * 2]
     # test_data = dataset[len(dataset) // 30 * 2:len(dataset) // 30 * 3]
@@ -454,7 +458,8 @@ def build(hidden_size, batch_size, cuda, bidirectional):
 
     encoder = EncoderRNN(len(config.tokenizer.vocab), config.pad_size, hidden_size,
                          dropout_p=0.2, input_dropout_p=0, bidirectional=bidirectional)
-    decoder = DecoderRNN(len(config.tokenizer.vocab), config.pad_size, hidden_size * 2 if bidirectional else hidden_size,
+    decoder = DecoderRNN(len(config.tokenizer.vocab), config.pad_size,
+                         hidden_size * 2 if bidirectional else hidden_size,
                          dropout_p=0.2, use_attention=True, bidirectional=bidirectional,
                          eos_id=config.tokenizer.convert_tokens_to_ids([SEP])[0],
                          sos_id=config.tokenizer.convert_tokens_to_ids([CLS])[0])
@@ -479,7 +484,6 @@ def build(hidden_size, batch_size, cuda, bidirectional):
     scheduler = get_linear_schedule_with_warmup(optimizer,
                                                 num_warmup_steps=int(config.warmup_proportion * t_total),
                                                 num_training_steps=t_total)  # PyTorch scheduler
-
 
     loss_fun = torch.nn.NLLLoss(reduce=False)
     return seq2seq, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config
@@ -531,7 +535,7 @@ def eval_set(model, dataloader, config):
 
 
 def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config):
-    #training steps
+    # training steps
     max_bleu = -99999
     save_file = {}
     for e in range(config.num_epochs):
@@ -549,41 +553,45 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
             optimizer.zero_grad()
 
             if i % 50 == 0:
-                print('train loss:%f' %loss.item())
+                print('train loss:%f' % loss.item())
 
-
-        #validation steps
+        # validation steps
         if e >= 0:
             val_results, bleu = eval_set(model, val_dataloader, config)
             print(val_results[0:5])
-            print('BLEU:%f' %(bleu))
+            print('BLEU:%f' % (bleu))
             if bleu > max_bleu:
                 max_bleu = bleu
                 save_file['epoch'] = e + 1
                 save_file['para'] = model.state_dict()
                 save_file['best_bleu'] = bleu
-                torch.save(save_file, './cache/best_save.data')
+                torch.save(save_file, './s2s/cache/best_save.data')
             if bleu < max_bleu - 0.6:
                 print('Early Stop')
                 break
             print(save_file['epoch'] - 1)
 
-
-    save_file_best = torch.load('./cache/best_save.data')
+    save_file_best = torch.load('./s2s/cache/best_save.data')
     print('Train finished')
-    print('Best Val BLEU:%f' %(save_file_best['best_bleu']))
+    print('Best Val BLEU:%f' % (save_file_best['best_bleu']))
     model.load_state_dict(save_file_best['para'])
     test_results, bleu = eval_set(model, test_dataloader, config)
     print('Test BLEU:%f' % (bleu))
-    with open('./result/best_save_bert.out.txt', 'w', encoding="utf-8") as f:
+    with open('./s2s/result/best_save_bert.out.txt', 'w', encoding="utf-8") as f:
         f.writelines([x + '\n' for x in test_results])
     return bleu
 
+
 def main():
-    seq2seq, optimizer,scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config = build(256, 16, True, True)
+    seq2seq, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config = build(256, 64,
+                                                                                                               True,
+                                                                                                               True)
     bleu = train(seq2seq, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config)
     print('finish')
 
 
 if __name__ == '__main__':
+    import os
+
+    os.environ['CUDA_VISIBLE_DEVICES'] = '2'
     main()

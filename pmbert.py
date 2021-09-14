@@ -578,7 +578,7 @@ def train(model, optimizer, scheduler, train_dataloader, val_dataloader, test_da
     return bleu
 
 def main():
-    seq2seq, optimizer,scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config = build(768, 16, True)
+    seq2seq, optimizer,scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config = build(768, 48, True)
     bleu = train(seq2seq, optimizer, scheduler, train_dataloader, val_dataloader, test_dataloader, loss_fun, config)
     print('finish')
 

@@ -1,0 +1,331 @@
+E:\ljx\medcn-s2s\venv\Scripts\python.exe E:/ljx/medcn-s2s/pmbert.py
+E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\modules\rnn.py:61: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+0it [00:00, ?it/s]E:\ljx\medcn-s2s\venv\lib\site-packages\torch\nn\functional.py:1628: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+1it [00:01,  1.96s/it]train loss:9.977428
+51it [00:24,  2.21it/s]train loss:9.224401
+101it [00:47,  2.18it/s]train loss:7.038338
+151it [01:10,  2.21it/s]train loss:6.487073
+201it [01:33,  2.15it/s]train loss:6.381561
+251it [01:55,  2.17it/s]train loss:6.397273
+301it [02:19,  2.10it/s]train loss:6.427229
+351it [02:42,  2.16it/s]train loss:6.106548
+401it [03:05,  2.10it/s]train loss:5.941244
+451it [03:28,  2.13it/s]train loss:6.285284
+501it [03:51,  2.17it/s]train loss:6.081520
+538it [04:08,  2.16it/s]
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 3-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 4-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+E:\ljx\medcn-s2s\venv\lib\site-packages\nltk\translate\bleu_score.py:516: UserWarning:
+The hypothesis contains 0 counts of 2-gram overlaps.
+Therefore the BLEU score evaluates to 0, independently of
+how many N-gram overlaps of lower order it contains.
+Consider using lower n-gram order or use SmoothingFunction()
+  warnings.warn(_msg)
+['结:::::,,治疗治疗治疗治疗疗治疗疗治疗疗治疗疗疗治疗疗疗治疗疗疗疗治疗疗疗疗治疗疗疗疗疗治疗疗疗疗疗疗治疗疗疗疗疗疗疗治疗', '结果::::治疗治疗,,,,,,,,,,,,,,,', '', '结病病病病病病病病病病病病病的病病,病病,病的病,病,', '结::::,,,治疗治疗治疗治疗治疗治疗治疗治疗疗治疗疗治疗疗治疗疗治疗疗治疗疗']
+BLEU:0.000134
+0
+1it [00:00,  2.04it/s]train loss:6.326603
+51it [00:23,  2.14it/s]train loss:6.124929
+101it [00:46,  2.25it/s]train loss:6.228136
+151it [01:09,  2.20it/s]train loss:6.125765
+201it [01:32,  2.16it/s]train loss:5.925018
+251it [01:56,  2.05it/s]train loss:5.589953
+301it [02:20,  2.19it/s]train loss:5.950613
+351it [02:43,  2.11it/s]train loss:4.834100
+401it [03:07,  2.10it/s]train loss:4.967780
+451it [03:31,  2.20it/s]train loss:5.775333
+501it [03:54,  2.21it/s]train loss:5.375827
+538it [04:12,  2.13it/s]
+['方法对例例性性性炎炎的年年中患者用用治疗法治疗疗疗疗疗疗疗疗疗疗疗疗疗效,', '结果例患者患者治疗治,有效率为.%', '', '结果是是腺炎,,,,,是"是一种是是是一种病病的病病病', '笔者年来用用用用用用用,,治疗疗治疗,,,,,,,,,,,,']
+BLEU:0.011950
+1
+1it [00:00,  1.87it/s]train loss:4.964706
+51it [00:23,  2.13it/s]train loss:5.395500
+101it [00:47,  2.14it/s]train loss:5.366452
+151it [01:11,  2.14it/s]train loss:5.086789
+201it [01:34,  2.00it/s]train loss:4.199606
+251it [01:58,  2.09it/s]train loss:4.812903
+301it [02:22,  2.18it/s]train loss:5.082017
+351it [02:46,  2.14it/s]train loss:4.122642
+401it [03:10,  2.08it/s]train loss:4.477721
+451it [03:33,  2.01it/s]train loss:3.956403
+501it [03:57,  2.18it/s]train loss:4.558132
+538it [04:14,  2.11it/s]
+['方法对例例性性肿肿肿大大学生学患者用该法治疗疗疗其治疗效,临床其机制', '结果例例患者者治疗,总有效率为.%', '', '皮肿肿肿瘤肿瘤腺炎,,,""是是是的常见病和多发病和多发病', '笔者近年来用大观察针针针血血清治疗疗疗疗疗肿例,,到的的疗效']
+BLEU:0.125521
+2
+1it [00:00,  2.00it/s]train loss:3.416883
+51it [00:23,  2.03it/s]train loss:3.589037
+101it [00:47,  2.02it/s]train loss:3.322483
+151it [01:11,  2.08it/s]train loss:3.980358
+201it [01:35,  2.10it/s]train loss:2.923619
+251it [01:58,  2.15it/s]train loss:3.799323
+301it [02:22,  2.08it/s]train loss:4.217434
+351it [02:46,  2.16it/s]train loss:3.182432
+401it [03:10,  2.09it/s]train loss:2.374906
+451it [03:33,  2.05it/s]train loss:3.064968
+501it [03:57,  2.05it/s]train loss:2.657739
+538it [04:15,  2.11it/s]
+['方法对例例急性粒肿院大家大学生患者用该法治疗并观察其疗效,探讨其疗效,探讨其机制', '结果例例患者全部治愈,总有效率为%', '', '粒肿肿肿肿肿炎,,,,""""是眼科的常见病和多发病和多发病', '笔者近年来采用大肌针点针放血加刺治疗粒肿肿例例例例,,,得到得意的疗效效']
+BLEU:0.290797
+3
+1it [00:00,  2.03it/s]train loss:2.484557
+51it [00:23,  2.10it/s]train loss:2.494917
+101it [00:47,  2.13it/s]train loss:3.645995
+151it [01:11,  2.11it/s]train loss:1.941764
+201it [01:34,  2.11it/s]train loss:2.411975
+251it [01:58,  2.05it/s]train loss:1.618701
+301it [02:22,  2.06it/s]train loss:3.560685
+351it [02:46,  2.13it/s]train loss:2.636407
+401it [03:09,  2.15it/s]train loss:3.094894
+451it [03:33,  2.11it/s]train loss:3.640189
+501it [03:57,  2.13it/s]train loss:3.593477
+538it [04:14,  2.11it/s]
+['方法对例例急性麦粒肿住家大学生患者用该法治疗并观察其疗效,探讨其机制', '结果例例患者全部治愈,总有效率为%%', '', '麦粒肿肿肿瘤,,,,"针"针"眼是眼科的常见病和多发病和多发病和多发病和多发病和多发病和多发病', '笔者近年来采用大肌穴点刺放血加灸治疗麦粒肿例例例,收到得得的疗效效']
+BLEU:0.429069
+0it [00:00, ?it/s]4
+1it [00:00,  2.03it/s]train loss:1.903688
+51it [00:23,  2.05it/s]train loss:1.924515
+101it [00:47,  2.11it/s]train loss:2.870877
+151it [01:11,  2.11it/s]train loss:2.335295
+201it [01:35,  2.07it/s]train loss:1.989781
+251it [01:58,  2.08it/s]train loss:2.407349
+301it [02:22,  2.13it/s]train loss:2.868321
+351it [02:46,  2.16it/s]train loss:1.825422
+401it [03:09,  2.12it/s]train loss:1.274287
+451it [03:33,  2.07it/s]train loss:1.321338
+501it [03:57,  2.08it/s]train loss:1.395303
+538it [04:14,  2.11it/s]
+['方法对60例急性麦粒肿住业大学生患者用该法治疗并观察其疗效,探讨其机制', '结果例例患者全部治愈,总有效率为100%', '', '麦粒肿即眼眼腺炎,,称"针"""是眼科的常见病和多发病', '笔者近年来采用大椎穴穴刺放血汤灸汤治疗麦粒肿例,收到满意的疗效']
+BLEU:0.507495
+0it [00:00, ?it/s]5
+1it [00:00,  2.24it/s]train loss:2.518703
+51it [00:23,  2.10it/s]train loss:2.977597
+101it [00:47,  2.08it/s]train loss:2.515238
+151it [01:11,  2.04it/s]train loss:0.916300
+201it [01:35,  2.11it/s]train loss:2.820927
+251it [01:59,  2.07it/s]train loss:0.819207
+301it [02:23,  2.07it/s]train loss:2.747921
+351it [02:47,  2.05it/s]train loss:0.818920
+401it [03:10,  2.11it/s]train loss:0.902421
+451it [03:34,  2.06it/s]train loss:1.168954
+501it [03:58,  2.09it/s]train loss:1.102931
+538it [04:15,  2.10it/s]
+['方法对80例急性麦粒肿住业大学生患者用该法治疗并观察其疗效,探讨其机制', '结果80例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,,称""针"眼是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加灸灸治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.558084
+6
+1it [00:00,  2.19it/s]train loss:2.546749
+51it [00:24,  2.09it/s]train loss:1.126962
+101it [00:47,  2.14it/s]train loss:2.131635
+151it [01:11,  2.05it/s]train loss:0.674775
+201it [01:35,  2.12it/s]train loss:2.926585
+251it [01:59,  2.20it/s]train loss:1.564124
+301it [02:23,  2.21it/s]train loss:2.309508
+351it [02:47,  2.03it/s]train loss:0.624657
+401it [03:11,  2.09it/s]train loss:0.708028
+451it [03:35,  2.07it/s]train loss:0.845566
+501it [03:58,  2.12it/s]train loss:2.558584
+538it [04:16,  2.10it/s]
+['方法对80例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果80例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称""针""是眼科的常见病', '笔者近年来采用大椎穴点刺放血加灸治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.578794
+7
+1it [00:00,  2.02it/s]train loss:1.236197
+51it [00:24,  2.06it/s]train loss:0.952006
+101it [00:47,  2.14it/s]train loss:1.962703
+151it [01:11,  2.08it/s]train loss:0.536895
+201it [01:35,  2.06it/s]train loss:1.160672
+251it [01:59,  2.08it/s]train loss:0.552452
+301it [02:22,  2.06it/s]train loss:0.953561
+351it [02:46,  2.07it/s]train loss:0.517924
+401it [03:10,  2.09it/s]train loss:0.563178
+451it [03:34,  2.13it/s]train loss:2.069412
+501it [03:57,  2.20it/s]train loss:2.353139
+538it [04:14,  2.11it/s]
+['方法对80例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果86例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"针"""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加灸治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.601665
+8
+1it [00:00,  2.05it/s]train loss:1.065100
+51it [00:23,  2.10it/s]train loss:0.711446
+101it [00:46,  2.20it/s]train loss:2.068717
+151it [01:10,  2.16it/s]train loss:0.845486
+201it [01:33,  2.21it/s]train loss:2.162414
+251it [01:56,  2.17it/s]train loss:1.100312
+301it [02:19,  2.12it/s]train loss:0.835599
+351it [02:42,  2.22it/s]train loss:1.065339
+401it [03:05,  2.24it/s]train loss:1.073355
+451it [03:29,  2.08it/s]train loss:0.538072
+501it [03:52,  2.22it/s]train loss:2.297290
+538it [04:09,  2.16it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果80例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称""针"""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加灸治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.606038
+0it [00:00, ?it/s]9
+1it [00:00,  2.05it/s]train loss:1.058503
+51it [00:23,  2.21it/s]train loss:1.895729
+101it [00:46,  2.16it/s]train loss:1.026928
+151it [01:09,  2.19it/s]train loss:0.544722
+201it [01:32,  2.25it/s]train loss:2.149838
+251it [01:55,  2.22it/s]train loss:0.657668
+301it [02:18,  2.21it/s]train loss:2.066687
+351it [02:41,  2.23it/s]train loss:0.806311
+401it [03:04,  2.09it/s]train loss:0.441335
+451it [03:27,  2.07it/s]train loss:0.493214
+501it [03:50,  2.08it/s]train loss:0.570677
+538it [04:07,  2.17it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称""针"""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加灸治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.622905
+0it [00:00, ?it/s]10
+1it [00:00,  2.28it/s]train loss:2.068080
+51it [00:23,  2.08it/s]train loss:0.632736
+101it [00:46,  2.20it/s]train loss:1.935390
+151it [01:09,  2.12it/s]train loss:0.252643
+201it [01:32,  2.12it/s]train loss:0.864291
+251it [01:55,  2.10it/s]train loss:0.353683
+301it [02:19,  2.17it/s]train loss:2.052703
+351it [02:41,  2.15it/s]train loss:0.614096
+401it [03:04,  2.21it/s]train loss:0.949922
+451it [03:27,  2.16it/s]train loss:0.421846
+501it [03:50,  2.17it/s]train loss:0.613727
+538it [04:07,  2.17it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称""针"""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔汤治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.623663
+0it [00:00, ?it/s]11
+1it [00:00,  2.30it/s]train loss:1.842174
+51it [00:23,  2.21it/s]train loss:2.147298
+101it [00:46,  2.15it/s]train loss:0.937206
+151it [01:09,  2.15it/s]train loss:0.208453
+201it [01:32,  2.11it/s]train loss:0.791412
+251it [01:55,  2.13it/s]train loss:0.551063
+301it [02:18,  2.20it/s]train loss:1.912435
+351it [02:41,  2.17it/s]train loss:0.284235
+401it [03:04,  2.20it/s]train loss:0.740910
+451it [03:27,  2.20it/s]train loss:2.371566
+501it [03:50,  2.20it/s]train loss:1.882374
+538it [04:07,  2.17it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"俗针""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.635420
+12
+1it [00:00,  2.05it/s]train loss:0.840182
+51it [00:23,  2.19it/s]train loss:1.761754
+101it [00:46,  2.19it/s]train loss:1.700498
+151it [01:09,  2.09it/s]train loss:0.178362
+201it [01:32,  2.08it/s]train loss:0.719462
+251it [01:55,  2.17it/s]train loss:0.273525
+301it [02:18,  2.10it/s]train loss:0.584397
+351it [02:41,  2.12it/s]train loss:0.260130
+401it [03:04,  2.17it/s]train loss:0.496641
+451it [03:27,  2.14it/s]train loss:2.078685
+501it [03:50,  2.11it/s]train loss:0.488753
+538it [04:07,  2.17it/s]
+0it [00:00, ?it/s]['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"俗眼"""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.632178
+12
+train loss:0.845906
+51it [00:23,  2.16it/s]train loss:1.917537
+101it [00:46,  2.26it/s]train loss:1.648880
+151it [01:09,  2.16it/s]train loss:0.165723
+201it [01:32,  2.15it/s]train loss:0.688409
+251it [01:55,  2.18it/s]train loss:0.235291
+301it [02:18,  2.14it/s]train loss:0.548949
+351it [02:41,  2.21it/s]train loss:0.409299
+401it [03:05,  2.13it/s]train loss:0.295892
+451it [03:28,  2.18it/s]train loss:2.053795
+501it [03:51,  2.09it/s]train loss:0.403433
+538it [04:08,  2.17it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"俗针""""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.633225
+12
+1it [00:00,  2.04it/s]train loss:0.806497
+51it [00:23,  2.15it/s]train loss:0.464549
+101it [00:46,  2.10it/s]train loss:0.803226
+151it [01:09,  2.20it/s]train loss:0.149887
+201it [01:32,  2.16it/s]train loss:0.669447
+251it [01:55,  2.25it/s]train loss:0.297004
+301it [02:18,  2.20it/s]train loss:1.616218
+351it [02:41,  2.13it/s]train loss:0.213520
+401it [03:04,  2.23it/s]train loss:0.549364
+451it [03:27,  2.21it/s]train loss:1.770038
+501it [03:50,  2.18it/s]train loss:1.934390
+538it [04:07,  2.17it/s]
+0it [00:00, ?it/s]['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"俗针""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.631944
+12
+train loss:0.759533
+51it [00:23,  2.17it/s]train loss:0.448218
+101it [00:46,  2.19it/s]train loss:1.519626
+151it [01:09,  2.15it/s]train loss:0.148331
+201it [01:32,  2.12it/s]train loss:0.609919
+251it [01:55,  2.14it/s]train loss:0.194046
+301it [02:18,  2.18it/s]train loss:1.586469
+351it [02:41,  2.22it/s]train loss:0.619423
+401it [03:04,  2.09it/s]train loss:0.279116
+451it [03:27,  2.19it/s]train loss:1.723478
+501it [03:50,  2.25it/s]train loss:1.650791
+538it [04:07,  2.17it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"俗针""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.640893
+16
+1it [00:00,  2.21it/s]train loss:1.775053
+51it [00:23,  2.21it/s]train loss:1.376572
+101it [00:46,  2.18it/s]train loss:1.437841
+151it [01:09,  2.22it/s]train loss:0.163845
+201it [01:31,  2.21it/s]train loss:1.878509
+251it [01:54,  2.19it/s]train loss:0.289245
+301it [02:17,  2.18it/s]train loss:1.526569
+351it [02:40,  2.17it/s]train loss:0.207737
+401it [03:04,  2.20it/s]train loss:0.492248
+451it [03:27,  2.07it/s]train loss:0.316854
+501it [03:50,  2.17it/s]train loss:1.802069
+538it [04:07,  2.17it/s]
+0it [00:00, ?it/s]['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '麦粒肿即睑腺炎,俗称"俗针""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.640208
+16
+train loss:1.650766
+51it [00:23,  2.20it/s]train loss:1.441198
+101it [00:46,  2.13it/s]train loss:0.751113
+151it [01:09,  2.14it/s]train loss:0.118536
+201it [01:32,  2.12it/s]train loss:0.615823
+251it [01:55,  2.12it/s]train loss:0.189239
+301it [02:18,  2.23it/s]train loss:1.497735
+351it [02:41,  2.16it/s]train loss:0.199027
+401it [03:03,  2.19it/s]train loss:0.529644
+451it [03:27,  2.14it/s]train loss:0.307339
+501it [03:50,  2.10it/s]train loss:0.355803
+538it [04:07,  2.17it/s]
+0it [00:00, ?it/s]['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '正麦粒肿即睑腺炎,俗称"俗针""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.640108
+16
+train loss:1.545903
+51it [00:23,  2.13it/s]train loss:1.209901
+101it [00:47,  2.19it/s]train loss:1.335548
+151it [01:10,  2.15it/s]train loss:0.123095
+201it [01:33,  2.27it/s]train loss:1.731700
+251it [01:56,  2.14it/s]train loss:0.189847
+301it [02:19,  2.24it/s]train loss:1.477636
+351it [02:42,  2.21it/s]train loss:0.376832
+401it [03:06,  2.11it/s]train loss:0.293093
+451it [03:29,  2.07it/s]train loss:0.286415
+501it [03:51,  2.17it/s]train loss:0.339699
+538it [04:09,  2.16it/s]
+['方法对81例急性麦粒肿住校大学生患者用该法治疗并观察其疗效,探讨其机制', '结果81例患者全部治愈,总有效率为100%', '', '【摘要】：正麦粒肿即睑腺炎,俗称"俗针""是眼科的常见病和多发病', '笔者近年来采用大椎穴点刺放血加拔罐治疗麦粒肿60例,收到满意的疗效']
+BLEU:0.641732
+19
+Train finished
+Best Val BLEU:0.641732
+Test BLEU:0.700845
+finish
+
+Process finished with exit code 0
