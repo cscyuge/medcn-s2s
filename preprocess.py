@@ -2,24 +2,34 @@
 import pickle
 import torch
 from tqdm import tqdm
+import re
 from transformers import BertTokenizer
 from keras.preprocessing.sequence import pad_sequences
 
 
 def main():
-    with open('./data/src_all.pkl', 'rb') as f:
-        src_all = pickle.load(f)
-    with open('./data/tar_all.pkl', 'rb') as f:
-        tar_all = pickle.load(f)
+    # with open('./data/src_all.pkl', 'rb') as f:
+    #     src_all = pickle.load(f)
+    # with open('./data/tar_all.pkl', 'rb') as f:
+    #     tar_all = pickle.load(f)
+
+
+    with open('./data/dataset-aligned.pkl','rb') as f:
+        dataset_aligned = pickle.load(f)
+    src_all = []
+    tar_all = []
+    for data in dataset_aligned:
+        src_all.extend(data[0].split('。'))
+        tar_all.extend(data[1].split('。'))
 
     # bert_model = 'trueto/medbert-base-wwm-chinese'
-    bert_model = 'bert-base-chinese'
+    bert_model = 'hfl/chinese-bert-wwm-ext'
     tokenizer = BertTokenizer.from_pretrained(bert_model)
-
     src_ids = []
     tar_ids = []
     len_cnt = [0 for _ in range(2600)]
     for src in tqdm(src_all):
+        src = re.sub('\*\*', '', src).lower()
         tokens = tokenizer.tokenize(src)
         tokens = ['[CLS]'] + tokens + ['[SEP]']
         ids = tokenizer.convert_tokens_to_ids(tokens)
@@ -27,6 +37,7 @@ def main():
         len_cnt[len(ids)] += 1
 
     for tar in tqdm(tar_all):
+        tar = re.sub('\*\*', '', tar).lower()
         tokens = tokenizer.tokenize(tar)
         tokens = ['[CLS]'] + tokens + ['[SEP]']
         ids = tokenizer.convert_tokens_to_ids(tokens)
@@ -36,7 +47,7 @@ def main():
     src_ids_smaller = []
     tar_ids_smaller = []
     tar_txts = []
-    max_len = 256
+    max_len = 64
     for src, tar, txt in zip(src_ids, tar_ids, tar_all):
         if len(src)<max_len and len(tar)<max_len:
             src_ids_smaller.append(src)
