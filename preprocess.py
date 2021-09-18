@@ -49,7 +49,7 @@ def main():
     tar_txts = []
     max_len = 64
     for src, tar, txt in zip(src_ids, tar_ids, tar_all):
-        if len(src)<max_len and len(tar)<max_len and len(src)>0 and len(tar)>0:
+        if len(src)<max_len and len(tar)<max_len and len(src)>0 and len(tar)>0 :
             src_ids_smaller.append(src)
             tar_ids_smaller.append(tar)
             tar_txts.append(txt)
